@@ -1,0 +1,63 @@
+.square1{
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-style: solid;
+}
+.square2{
+    width: 150px;
+    height: 150px;
+    background: green;
+    border-style: solid;
+}
+.square3{
+    width: 150px;
+    height: 150px;
+    background: blue;
+    border-style: solid;
+}
+.square4{
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    border-style: solid;
+}
+.square5{
+    width: 150px;
+    height: 150px;
+    background: orange;
+    border-style: solid;
+}
+.square1 h2 {
+     color: white;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight: normal;
+ }
+.square2 h2 {
+    color: white;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight: normal;
+}
+.square3 h2 {
+    color: white;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight: normal;
+}
+.square4 h2 {
+    color: black;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight: normal;
+}
+.square5 h2 {
+    color: white;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-weight: normal;
+}
+h1{
+    font-size: 60px;
+}

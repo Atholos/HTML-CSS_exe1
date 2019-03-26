@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: antiquewhite;
+            margin-top: 40px;
+        }
+        html {
+            height: 100%;
+            margin-bottom: 0.01em;
+        }
+        .box {
+            overflow: auto;
+            height: 40px;
+            width: 10%;
+            border: 1px solid black;
+            color: aliceblue;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: auto;
+            float: left;
+        }
+
+        button{
+            height: 50px;
+            width: 100px;
+            position:relative;
+            top:50%;
+            left:50%;
+        }
+        #wrap {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #red { background-color: red;}
+        #green { background-color: green;}
+        #blue { background-color: blue;}
+        #yellow { background-color: yellow; color: black;}
+        #orange { background-color: orange;}
+        #aquamarine{background-color: aquamarine;color:black;}
+        #aliceblue{background-color: aliceblue;color:black;}
+        #brown{background-color: brown;}
+
+        .clear { clear: both;}
+
+        /* img */
+        img {
+            width: 100%;
+            max-width: 100px;
+            margin: auto;
+        }
+
+        /* container */
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* relative and absolute positioning with blue */
+        #blue {
+        }
+        p{
+            color: black;
+        }
+        h1{
+            color: green;
+        }
+        div{
+            display: block;
+        }
+
+        .boxi{
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            color: aliceblue;
+            background-color: green;
+            box-sizing: border-box;
+
+        }
+        .inner{
+            height: 100px;
+            width: 100px;
+            background-color: saddlebrown;
+            box-sizing: border-box;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+        }
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        #exampleBoxSizeBB{
+            box-sizing: border-box;
+            width: 300px;
+            height: 100px;
+            padding: 30px;
+            border: 1px solid black;
+        }
+        nav{
+            overflow: hidden;
+            width:100%;
+            display: block;
+            position: fixed;
+            top:0;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+
+<h1 class = "clear" style="display:inline;">Heading 1</h1>
+    <h1 style="display:inline;">Heading 2</h1>
+    <h1>Heading 3</h1>
+
+
+<p>The line of boxes above which have the element 'display:Block', takes up the whole width of it's row, so no other element can be on the same row, the width is also 10% for each box, with 6 boxes,
+    60% of the row is covered. With float left, it could be guarantee that the boxes stayed left, after all
+The headings have 'display:inline', it inlines the elements, so that the headings are next to each other instead of being on their own rows, as seen above.</p>
+
+
+<div id="exampleBoxSizeBB">Width and height apply to all parts of the element: content, padding and borders. The full width is 300px!</div>
+
+<div class="container">
+    <img src= https://media.alienwarearena.com/media/tux-r.jpg alt="Linux" style="float:left;">
+</div>
+
+<p>Here we have a 'float:left' image!
+    <br> The image will stay on the left no matter how much is written in the paragraph. If it was 'float:right' it would be on the right instead of left. So surprising!
+<br>With the help of 'br-tag', which is line break, I'll show you that the image will stay on the left side of the text.
+<br>The text will continue beneath the picture.
+<br>Soon there.
+<br>Keep looking.
+<br>Just proving the point on the second and third row of text.</p>
+
+<div class="container" >
+    <img src= https://media.alienwarearena.com/media/tux-r.jpg alt="Linux">
+    <div class="middle">Hi</div>
+</div>
+<p>Linux logo in the middle of the page? Thanks to the help of CSS styling it is. With 'Margin:Auto' and 'width:100%' this one was made, so no other text or picture can be insert on the row.
+How is it so small? With the help of 'max-width: 100px', tho in chrome it will show x*104 px, but it's close enough.
+The 'Hi' text was positioned with 'position:absolute' in order for it to be in the image.</p>
+
+<!-- Responsive images and centering -->
+
+<button onclick="window.location.href = 'https://www.google.fi/';">Best place to search!</button>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Et praesentium, quibusdam. Accusantium ad commodi quidem reprehenderit totam. Eligendi iste maxime odio recusandae vero.<br> Consectetur dolores, ipsa laboriosam nesciunt nobis quia?
+    <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Beatae consequatur consequuntur cum debitis doloribus ducimus earum eius excepturi explicabo, id iste necessitatibus odit, <br>provident recusandae sed similique sit veritatis voluptatum!
+    <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Blanditiis illo, labore? Commodi culpa cum delectus dignissimos dolor facere, id illum inventore, ipsa molestiae optio provident<br> quam, quas quis repellendus similique.
+    <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Accusantium corporis dolore eaque fugit hic perspiciatis porro, sed veritatis. Aliquid, amet assumenda consequatur deleniti enim incidunt quidem quos reiciendis vero voluptas?</p>
+
+    <div class="container">
+        <img src= https://www.seoclerk.com/pics/523331-1e2qQI1490977998.jpg alt="HTML & CSS" style="max-width: 50%">
+    </div>
+    <nav>
+        <div class="box" id="red">Inline & Block<a href="https://www.w3schools.com/cssref/pr_class_display.asp"> link</a></div><!--
+--><div class="box" id="green">Box-sizing<a href="https://www.w3schools.com/css/css3_box-sizing.asp"> link</a></div><!--
+--><div class="box" id="blue">Max-width<a href="https://www.w3schools.com/cssref/css_units.asp" style="color: white;"> link</a></div><!--
+--><div class="box" id="yellow">Float<a href="https://www.w3schools.com/cssref/pr_class_float.asp"> link</a></div><!--
+--><div class="box" id="orange">Positioning<a href="https://www.w3schools.com/cssref/pr_class_position.asp"> link</a></div><!--
+--><div class="box" id="brown">Center<a href="https://www.w3schools.com/css/css_align.asp"> link</a></div><!--
+-->
+    </nav>
+</div>
+</body>
+</html>
